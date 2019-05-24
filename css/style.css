@@ -1,0 +1,307 @@
+/*_____GENERAL STYLES _____*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: 'Merriweather', serif;
+}
+
+
+/*_____MAIN HEADER _____*/
+
+.main-header {
+  background-color: #2d3945;
+  color: #fff;
+  width: 100%;
+}
+
+.main-header h1 {
+  font-family: 'Audiowide', cursive;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  padding: 1.2em 0;
+  text-align: center;
+  max-width: 100%;
+  font-size: 1.5em;
+}
+
+/*_____SECONDARY HEADER _____*/
+
+.head-secondary {
+  text-align: center;
+}
+
+.head-secondary p {
+  color: gray;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  font-size: 1.2em;
+  padding-bottom: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+.lines {
+  width: 90%;
+  height: 10px;
+  border-top: 3px solid #000;
+  border-bottom: 1px solid #000;
+  margin: auto;
+}
+
+/*_____MAIN CONTENT _____*/
+
+form {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/* CONTACT INFO SECTION */
+
+legend {
+  font-weight: bold;
+  font-size: 1.3em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* This sets the placeholder to Right Justify in Chrome*/
+input::-webkit-input-placeholder {
+  direction: rtl;
+  text-align: right;
+  font-style: italic;
+  color: gray;
+  padding-right: 12px;
+}
+
+/* Optional Placeholder for Chrome*/
+input[name*="phone"]::-webkit-input-placeholder,
+input[name*="city"]::-webkit-input-placeholder,
+input[name*="address"]::-webkit-input-placeholder,
+input[name*="state"]::-webkit-input-placeholder,
+input[name*="zip"]::-webkit-input-placeholder {
+  text-align: left;
+  font-style: normal;
+  padding-left: 12px;
+}
+
+/*Textarea placeholder for Chrome*/
+textarea::-webkit-input-placeholder {
+  text-align: center;
+  font-style: normal;
+}
+
+/* This sets the placeholder to Right Justify in Firefox*/
+:placeholder-shown {
+  direction: rtl;
+  text-align: right;
+  font-style: italic;
+  color: gray;
+  padding-right: 12px;
+}
+
+/* This sets the placeholder to Right Justify in Microsoft Edge*/
+input:-ms-input-placeholder {
+  direction: rtl;
+  text-align: right;
+  font-style: italic;
+  color: gray;
+  padding-right: 12px;
+}
+
+input[name*="name"]:focus,
+input[name*="email"]:focus,
+input[name*="phone"]:focus,
+input[name*="city"]:focus,
+input[name*="address"]:focus,
+input[name*="state"]:focus,
+input[name*="zip"]:focus {
+  background-color: #4ebbb5;
+  opacity: .7;
+  -webkit-transform: translate3d(-20px, 0, 0);
+  -webkit-transition: opacity .9s ease-in-out;
+  text-align: left;
+}
+
+input[name*="name"]:valid {
+  background-color: #4ebbb5;
+}
+
+input[name*="email"]:valid {
+  background-color: #4ebbb5;
+}
+
+input[name*="email"]:not(:placeholder-shown):invalid {
+  background-color: tomato;
+}
+
+
+select:focus {
+  background-color: #4ebbb5;
+  opacity: .7;
+  -webkit-transform: translate3d(-20px, 0, 0);
+  -webkit-transition: opacity .9s ease-in-out;
+}
+
+
+input, textarea, select {
+  background-color: #eff0f1;
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
+#contact-info input,
+#contact-info select {
+  width: 95%;
+  height: 3em;
+  border-radius: 4px;
+}
+
+#contact-info {
+  padding-bottom: 1em;
+}
+
+
+#contact-info {
+  padding-bottom: 1.2em;
+}
+
+label[for*="name"],
+label[for*="email"],
+label[for*="phone"],
+label[for*="city"],
+label[for*="address"],
+label[for*="state"],
+label[for*="zip"] {
+  width: 100%;
+}
+
+/*This rule is for the pseudo placeholder for the State Select option */
+select:invalid {
+  color: gray;
+  text-align: left;
+  padding-left: 12px;
+}
+
+.line {
+  width:100%;
+  border-top: 3px solid #000;
+  margin: auto;
+}
+
+/* NEWSLETTER SECTION */
+
+fieldset {
+  border: none;
+}
+
+
+button {
+  background-color: #4ebbb5;
+  color: #fff;
+  width: 100%;
+  border: none;
+  padding: 1.2em 0;
+  border-radius: 4px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+textarea {
+    width: 100%;
+    height: 9em;
+}
+
+input[type="checkbox"] {
+  background-color: blue;
+  color: white;
+}
+
+#newsletter {
+  line-height: 2.2em;
+}
+
+/*_____FOOTER _____*/
+
+.main-footer {
+  background-color: #2d3945;
+  text-align: center;
+  color: #fff;
+}
+
+footer {
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+/*_____MEDIA QUERIES _____*/
+
+@media screen and (min-width: 768px) {
+  label[for*="name"],
+  label[for*="email"],
+  label[for*="phone"],
+  label[for*="city"],
+  label[for*="address"],
+  label[for*="state"],
+  label[for*="zip"] {
+    max-width: 30%;
+    display: inline-block;
+  }
+
+  #name,
+  #email,
+  #phone,
+  #address,
+  #city,
+  #state,
+  #zip {
+    display: inline-block;
+    max-width: 60%;
+  }
+
+  .main-content {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .head-secondary {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .lines {
+    max-width: 65%;
+    margin: 0 auto;
+  }
+
+  form {
+    margin: 0 auto;
+
+  }
+
+  #contact-info {
+    margin: 0;
+    padding: 0;
+  }
+
+  .line {
+    width: 100%;
+    margin-top: 1.2em;
+  }
+
+  #newsletter {
+    margin: 0;
+    padding: 0;
+  }
+
+
+}
